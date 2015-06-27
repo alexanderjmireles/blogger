@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <h1><%= @article.title %></h1>
 <p><%= image_tag @article.image.url %></p>
 <p><%= @article.body %></p>
@@ -8,4 +9,4 @@
 <%= link_to "delete", article_path(@article),  method: :delete %>
 <%= link_to "edit", edit_article_path(@article) %>
 
-  
+  <% end %>
